@@ -1,0 +1,50 @@
+{
+  "id": "backstopjs_visual_regression",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "label": "phone",
+      "width": 360,
+      "height": 640
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Homepage BackstopJS",
+      "url": "https://garris.github.io/BackstopJS/",
+      "selectors": ["html"],
+      "selectorExpansion": true,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "BackstopJS Footer",
+      "url": "https://garris.github.io/BackstopJS/",
+      "selectors": ["div:nth-child(3) > p:nth-child(3)"],
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

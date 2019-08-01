@@ -1,0 +1,17 @@
+# Shared between .npmignore and .gitignore
+yarn.lock
+chromedriver.log
+libpeerconnection.log
+xmloutput*
+npm-debug.log
+.idea/
+.vscode/
+*.DS_Store
+*.swp
+
+# Build artifacts
+backstop_data/bitmaps_reference
+backstop_data/bitmaps_test
+backstop_data/html_report
+node_modules/
+package-lock.json

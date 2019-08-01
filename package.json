@@ -1,0 +1,17 @@
+{
+  "name": "backstopjs_project",
+  "version": "1.0.0",
+  "description": "Projeto usado para validar alterações de layout.",
+  "devDependencies": {
+    "backstopjs": "^4.1.9",
+    "puppeteer": "^1.19.0"
+  },
+  "main": "backstopjs.json",
+  "scripts": {
+    "simple_build": "cd ../backstopjs_visual_regression && npm install",
+    "visual_test": "rm -rf backstop_data/bitmaps_test && backstop test",
+    "visual_approve": "backstop approve"
+  },
+  "author": "Caio Stigliani Recamon",
+  "license": "MIT"
+}
